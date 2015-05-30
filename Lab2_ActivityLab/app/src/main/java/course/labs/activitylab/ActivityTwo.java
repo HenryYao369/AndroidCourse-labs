@@ -29,13 +29,15 @@ public class ActivityTwo extends Activity {
 	
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called.
-	
 
+	int mCreate = 0, mRestart = 0, mStart = 0, mResume = 0;
 	
 	
 	// TODO: Create variables for each of the TextViews
 	// named  mTvCreate, mTvRestart, mTvStart, mTvResume.
 	// for displaying the current count of each counter variable
+
+	TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +77,7 @@ public class ActivityTwo extends Activity {
 
 
 			
-			
+
 			
 			
 		}
@@ -87,8 +89,9 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface via the displayCounts() method
 
+		mCreate++;
+		displayCounts();
 
-		
 		
 	}
 
@@ -105,9 +108,9 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
+		mStart++;
+		displayCounts();
 
-		
-		
 	}
 
 	@Override
@@ -121,8 +124,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
-
-	
+		mResume++;
+		displayCounts();
 	}
 
 	@Override
@@ -152,8 +155,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
-
-	
+		mRestart++;
+		displayCounts();
 	
 	}
 
@@ -187,12 +190,12 @@ public class ActivityTwo extends Activity {
 	public void displayCounts() {
 
 		// TODO - uncomment these lines
-	/*
+
 		mTvCreate.setText("onCreate() calls: " + mCreate);
 		mTvStart.setText("onStart() calls: " + mStart);
 		mTvResume.setText("onResume() calls: " + mResume);
 		mTvRestart.setText("onRestart() calls: " + mRestart);
-	*/
+
 	
 	}
 }
