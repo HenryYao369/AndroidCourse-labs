@@ -47,6 +47,10 @@ public class ActivityOne extends Activity {
 		// TODO: Assign the appropriate TextViews to the TextView variables
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
+		mTvCreate = (TextView) findViewById(R.id.create);
+		mTvRestart = (TextView) findViewById(R.id.restart);
+		mTvStart = (TextView) findViewById(R.id.start);
+		mTvResume = (TextView) findViewById(R.id.resume);
 
 		Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
 		launchActivityTwoButton.setOnClickListener(new OnClickListener() {
@@ -59,10 +63,10 @@ public class ActivityOne extends Activity {
 
 				// Create an intent stating which Activity you would like to
 				// start
-				Intent intent = null;
+				Intent intent = new Intent(ActivityOne.this, ActivityTwo.class); // 下一周才讲Intent!
 
 				// Launch the Activity using the intent
-
+				startActivity(intent);
 			}
 		});
 

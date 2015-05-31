@@ -48,11 +48,11 @@ public class ActivityTwo extends Activity {
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
 
+		mTvCreate = (TextView) findViewById(R.id.create);
+		mTvRestart = (TextView) findViewById(R.id.restart);
+		mTvStart = (TextView) findViewById(R.id.start);
+		mTvResume = (TextView) findViewById(R.id.resume);
 
-		
-		
-		
-		
 		Button closeButton = (Button) findViewById(R.id.bClose); 
 		closeButton.setOnClickListener(new OnClickListener() {
 
@@ -63,7 +63,7 @@ public class ActivityTwo extends Activity {
 				// This function closes Activity Two
 				// Hint: use Context's finish() method
 
-				
+				finish();
 			
 			}
 		});
